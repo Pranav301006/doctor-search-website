@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocFind - Find the Best Doctors Near You</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-user-md"></i>
+                <span>DocFind</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/doctors.html" class="nav-link">Find Doctors</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Find the Best Doctors Near You</h1>
+                <p class="hero-subtitle">Search and book appointments with qualified healthcare professionals across India</p>
+                
+                <!-- Search Form -->
+                <div class="search-container">
+                    <div class="search-form">
+                        <div class="search-field">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="searchInput" placeholder="Search by doctor name or specialization">
+                        </div>
+                        <div class="search-field">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <select id="locationSelect">
+                                <option value="">Select Location</option>
+                                <option value="New Delhi">New Delhi</option>
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="Bangalore">Bangalore</option>
+                                <option value="Chennai">Chennai</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Gurgaon">Gurgaon</option>
+                                <option value="Noida">Noida</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                            </select>
+                        </div>
+                        <button class="search-btn" onclick="searchDoctors()">
+                            <i class="fas fa-search"></i>
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/premium_photo-1661769167673-cfdb37f156d8.jpeg" alt="Doctor consultation" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Specializations Section -->
+    <section class="specializations">
+        <div class="container">
+            <h2 class="section-title">Popular Specializations</h2>
+            <div class="specializations-grid">
+                <div class="specialization-card" onclick="filterBySpecialization('Cardiologist')">
+                    <div class="spec-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Cardiology</h3>
+                    <p>Heart & Cardiovascular</p>
+                </div>
+                <div class="specialization-card" onclick="filterBySpecialization('Dermatologist')">
+                    <div class="spec-icon">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                    <h3>Dermatology</h3>
+                    <p>Skin & Hair Care</p>
+                </div>
+                <div class="specialization-card" onclick="filterBySpecialization('Pediatrician')">
+                    <div class="spec-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Pediatrics</h3>
+                    <p>Child Healthcare</p>
+                </div>
+                <div class="specialization-card" onclick="filterBySpecialization('Orthopedic')">
+                    <div class="spec-icon">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <h3>Orthopedics</h3>
+                    <p>Bone & Joint Care</p>
+                </div>
+                <div class="specialization-card" onclick="filterBySpecialization('Neurologist')">
+                    <div class="spec-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Neurology</h3>
+                    <p>Brain & Nervous System</p>
+                </div>
+                <div class="specialization-card" onclick="filterBySpecialization('Gynecologist')">
+                    <div class="spec-icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <h3>Gynecology</h3>
+                    <p>Women's Health</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Doctors Section -->
+    <section class="featured-doctors">
+        <div class="container">
+            <h2 class="section-title">Featured Doctors</h2>
+            <div class="doctors-grid" id="featuredDoctors">
+                <!-- Featured doctors will be loaded here by JavaScript -->
+                <div style="text-align: center; padding: 2rem; color: #666;">
+                    Loading doctors...
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="pages/doctors.html" class="btn-primary">View All Doctors</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-user-md"></i>
+                        <span>DocFind</span>
+                    </div>
+                    <p>Your trusted platform to find and connect with the best healthcare professionals across India.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/doctors.html">Find Doctors</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Specializations</h3>
+                    <ul>
+                        <li><a href="#">Cardiology</a></li>
+                        <li><a href="#">Dermatology</a></li>
+                        <li><a href="#">Pediatrics</a></li>
+                        <li><a href="#">Orthopedics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +91-9876543210</p>
+                        <p><i class="fas fa-envelope"></i> info@docfind.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DocFind. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files - Load data first, then app -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
