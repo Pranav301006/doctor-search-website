@@ -74,5 +74,5 @@ project-root/
 
 **Pranav Sarda**
 📧 [pranaveducation30@gmail.com](mailto:pranaveducation30@gmail.com)
-🌐 \[LinkedIn / Portfolio – Optional]
+
 
