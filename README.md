@@ -1,63 +1,78 @@
 
-
-
-
-# 🩺 Doctor Search Website – DocFind
+# 🩺 DocFind – Doctor Search Web Application
 
 ## 📌 Overview
-DocFind is a responsive web application that allows users to search for doctors by specialization and location, providing quick access to essential doctor details. Designed with a clean and modern UI, the project aims to make healthcare information more accessible and user-friendly.
+**DocFind** is a responsive and user-friendly web application designed to help users search for doctors based on specialization, view their detailed profiles, and reach out through a contact page. It aims to simplify healthcare navigation and improve accessibility for users looking for medical professionals.
 
-## 🎨 Features
-✅ Search for doctors by specialization or location  
-✅ Responsive design for mobile, tablet, and desktop  
-✅ Professional, easy-to-use interface  
-✅ Doctor profile cards displaying name, specialty, rating, location, and contact  
-✅ Hosted live on Netlify for easy access  
+## ✨ Features
+- 🔍 Search for doctors by specialization on the **Find the Doctor** page (`index.html`)
+- 👨‍⚕️ View full doctor profiles on the **Doctor Details** page (`doctor-detail.html`)
+- 📩 Send messages or inquiries via the **Contact Us** page (`contact.html`)
+- 📱 Fully responsive across desktop, tablet, and mobile devices
+- 🎨 Clean, modern UI with consistent styling and navigation
+- 🚀 Deployed on Netlify for easy access
 
 ## 🛠️ Tech Stack
-- **Frontend:** HTML, CSS, JavaScript  
-- **Design:** Figma (high-fidelity mockups)  
-- **Deployment:** Netlify  
+- **Frontend:** HTML5, CSS3, JavaScript 
+- **Design Prototyping:** Figma
+- **Deployment Platform:** Netlify
 
-## 📂 Project Structure
+## 📁 Folder Structure
 
 ```
-doctor-search-website/
-├── index.html
-├── styles.css
-├── scripts.js
-├── doctors.json
-├── assets/ (images, icons)
+
+project-root/
+├── css/                      # Stylesheets
+│   ├── contact.css
+│   ├── doctor-detail.css
+│   ├── doctors.css
+│   ├── home.css
+│   └── style.css
+│
+├── images/                   # Static assets and images
+│
+├── js/                       # JavaScript files
+│   ├── app.js
+│   ├── contact.js
+│   ├── data.js
+│   ├── debug.js
+│   ├── doctor-detail.js
+│   ├── doctors.js
+│   ├── home.js
+│   └── main.js
+│
+├── pages/                    # Main HTML pages
+│   ├── contact.html
+│   ├── doctor-detail.html
+│   ├── doctors.html
+│   └── index.html
 ```
 
-## 🗂️ Pages
-- **Home Page** – Includes the search bar, doctor listings, and responsive doctor cards.  
+## 🌐 Pages Breakdown
+
+- **🧭 Find the Doctor (index.html)**  
+  - Main landing/search page
+  - Search bar and filter options
+  - Displays doctors by category/specialization
+
+- **📄 Doctor Details (doctor-detail.html)**  
+  - Displays individual doctor's full profile
+  - Includes contact, description, ratings, and more
+
+- **📬 Contact Us (contact.html)**  
+  - Contact form to allow users to send inquiries or appointment requests
 
 
-## ⚙️ How to Run Locally
-1. Download or clone the repository.
-2. Open `index.html` directly in your browser.
-3. The website will load with dummy doctor data from `doctors.json`.
-4. Use the search bar to filter doctors by specialization or location.
+## 🎯 Learnings
 
-## 🚀 Deployment
-The website is deployed on Netlify. You can access it here:  
-👉 [Live Site Link](https://your-netlify-url.netlify.app)  
-*(Replace the link above with your actual Netlify URL.)*
+* Developed practical experience with modular HTML/CSS/JS project structuring
+* Enhanced JavaScript logic skills for dynamic content rendering
+* Learned static site deployment with Netlify
+* Practiced UI/UX consistency and responsive web design
 
-## 📷 Screenshots
-Include screenshots of:
-- The homepage with the search bar
-- Doctor listings showing search results
+## 👨‍💻 Author
 
-## 📚 Learnings
-- Practiced end-to-end website creation, from UI design in Figma to deployment.
-- Improved understanding of responsive design, DOM manipulation, and project structuring.
-- Learned to simulate backend data with a JSON file for demonstration.
-
-## 📧 Contact
-Created by **Pranav Sarda**  
-Email: [pranaveducation30@gmail.com](mailto:pranaveducation30@gmail.com)
-
-
+**Pranav Sarda**
+📧 [pranaveducation30@gmail.com](mailto:pranaveducation30@gmail.com)
+🌐 \[LinkedIn / Portfolio – Optional]
 
