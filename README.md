@@ -32,7 +32,7 @@ doctor-search-website/
 
 ## 🗂️ Pages
 - **Home Page** – Includes the search bar, doctor listings, and responsive doctor cards.  
-*(About page removed for simplicity and focus on core functionality.)*
+
 
 ## ⚙️ How to Run Locally
 1. Download or clone the repository.
